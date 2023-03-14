@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Añadir producto</title>
+</head>
+<body>
+  <h1>Añadir producto</h1>
+  <hr>
+  <form action="{% url 'index' %}" method='POST'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Crear Producto">
+
+  </form>
+
+</body>
+</html>
